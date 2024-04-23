@@ -11,11 +11,24 @@ class Carro:
         print("Cor: ", self.cor)
         print("Ano: ", self.ano)
 
-carro1 = Carro("Toyota", "Corolla", "Prata", 2002)
-carro2 = Carro("Honda", "Civic", "Preto", 2023)
+carro = []
 
-carro1.exibir_informacoes()
-carro2.exibir_informacoes()
+while True:
+   marca = input("digite a marca do carro ou 'sair' para encerrar o programa")
 
-input()
 
+   if marca.lower == "sair":
+      print("Até a Proxima!")
+      break
+   
+   modelo = input("digite o modelo")
+   cor = input("digite a cor")
+   ano = input("digite o ano")
+
+   carro = Carro(marca,modelo,cor)
+   carros.append(carro)
+
+print("\n informações do carro")
+for i, carros in enumerate(carros, start=1):
+   print(f"\n Carro{i}")
+   carro.exibir_informacoes()
